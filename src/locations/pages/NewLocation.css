@@ -1,0 +1,91 @@
+.location-form{
+    list-style: none;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 40rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.30);
+    border-radius: 6px;
+    color:white;
+    background:#7A316F;
+}
+
+form-control {
+    margin: 1rem 0;
+   
+  }
+  
+  .form-control label,
+  .form-control input,
+  .form-control textarea {
+    display: block;
+    font-family: 'Kalam', cursive;
+    
+  }
+  
+  .form-control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    
+  }
+  
+  .form-control input[type="text"],
+  .form-control textarea {
+    width: 100%;
+    font: inherit;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    letter-spacing: 1px;
+    padding: 0.15rem 0.25rem;
+    resize: none;
+  }
+  
+  .form-control input[type="text"]:focus,
+  .form-control textarea:focus {
+    outline: none;
+    background: #ebebeb;
+    border-color: #510077;
+  }
+  
+.form-control button {
+background-color: #CD6688;
+border: 1px solid white;
+padding:0.5rem 1rem;
+border-radius: 10px; 
+color:white;
+display:block;
+margin:0 auto;
+cursor:pointer;
+transition: background 0.1s ease-in;
+font-family: 'Kalam', cursive;
+
+}
+.form-control button:hover{
+  background-color: transparent;
+  color:#CD6688;
+}
+
+.inputfile{
+  width: 100%;
+  display: block;
+  background-color:transparent;
+  border:none;
+}
+
+input[type=file]::file-selector-button {
+padding:0.5rem 1rem;
+color:white;
+background-color: #CD6688;
+border-radius: 10px; 
+cursor:pointer;
+border: 1px solid white;
+font-family: 'Kalam', cursive;
+
+}
+input[type=file]::file-selector-button:hover{
+  background-color: transparent;
+  color:#CD6688;
+}

@@ -1,0 +1,67 @@
+.locationitem {
+     margin: 1rem 0;
+   }
+   
+   .locationitem-content {
+     padding: 0;
+     background:#292929;
+     border-radius: 5px;
+     color:#CD6688; 
+     box-shadow:0 2px 8px rgba(0, 0, 0, 0.26);
+   }
+   
+   .locationitem-infor {
+     padding: 1rem;
+     text-align: center;
+   }
+   
+   .locationitem-pic {
+     width: 100%;
+     height: 15rem;
+     margin-right: 1.5rem;
+   }
+   
+   .locationitem-pic img {
+     width: 100%;
+     height: 100%;
+     transition: transform .2s;
+     object-fit: cover;
+     border-radius: 5px; 
+   }
+   .locationitem-pic img:hover{
+     transform: scale(1.1);
+   }
+ 
+   .locationitem-infor h2,
+   .locationitem-infor h3,
+   .locationitem-infor p {
+     margin: 0 0 0.5rem 0;
+     font-family: 'Kalam', cursive;
+   }
+   
+   .locationitem-action {
+     padding: 0.5rem;
+     text-align: center;
+     border-top: 1px solid #ccc;
+   }
+   
+ 
+   
+   .locationitem-action button,
+   .locationitem-action a {
+     margin: 0.5rem;
+     text-align: right;
+     position: relative;
+     padding:0 1rem;
+     right:-17rem;
+     border: none;
+     border-radius: 20%;
+     cursor: pointer;
+     transition: background .2s ease-out;
+   }
+   .locationitem-action button:hover{
+     background-color: #CD6688;
+     color:white;
+   }
+   
+  

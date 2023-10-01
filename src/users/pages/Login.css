@@ -1,0 +1,84 @@
+.login-form{
+    list-style: none;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 90%;
+    max-width:40rem;
+    box-shadow: 0 2px 8px black;
+    border-radius: white;
+    background: #7A316F;
+}
+.login{
+    text-align: center;
+    font-size: 2rem;
+    font-family:'Kalam', cursive;
+    font-weight: 600;
+    color:#e4d3f4;
+}
+.form-control label,
+.form-control input,
+.form-control textarea {
+    display: block;
+    font-family: 'Kalam', cursive;
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+.form-control input[type='email'], input[type='password'], input[type='media']
+{
+    width: 100%;
+    font: inherit;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    letter-spacing: 1px;
+    padding: 0.15rem 0.25rem;
+    resize: none;
+}
+.form-control input:focus,
+.form-control textarea:focus{
+    outline: none;
+    background:white;
+    border-color:white;
+
+}
+.form-control p{
+    color: white;
+    margin-left: 200px;
+    margin-top: 15px;
+    margin-bottom: -3px;
+}
+.form-control .register-button{
+    margin-top: 2px;
+    color:white;
+    background: transparent;
+    border: none;
+    font-size: larger;
+}
+.form-control .login-button{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form-control button{
+    background-color: #CD6688;
+    border: 1px solid white;
+    padding:0.5rem 1rem;
+    border-radius: 10px;
+    color:white;
+    display:block;
+
+    cursor:pointer;
+    transition: background 0.1s ease-in;
+    font-family:'Kalam', cursive;
+
+}
+.form-control button:hover{
+    background-color: transparent;
+    color:#CD6688;
+}

@@ -6,7 +6,7 @@ const LocationsItem = (props) => {
     <li className="locationitem">
       <div className="locationitem-content">
         <div className="locationitem-pic">
-          <img src={`https://mern-pickpot-backend.onrender.com/${props.pic}`} alt={props.title} />
+          <img src={`${props.pic}`} alt={props.title} />
         </div>
         <div className="locationitem-infor">
           <h2>{props.title}</h2>

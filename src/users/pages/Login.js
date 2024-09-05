@@ -26,12 +26,9 @@ const Login = () => {
         }),
       });
       const responseData = await response.json();
-      console.log("login page :", responseData);
       if (!response.ok) {
-        // console.log(responseData);
         throw new Error(responseData.message);
       }
-      console.log(responseData.message._id)
       loggedin.login(responseData.message._id);
     } catch (err) {
       alert(err.message, () => {

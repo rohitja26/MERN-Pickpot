@@ -11,7 +11,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-  const submitHandler = async(event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
     setError(null);
     try {
@@ -31,6 +31,7 @@ const Login = () => {
         // console.log(responseData);
         throw new Error(responseData.message);
       }
+      console.log(responseData.message._id)
       loggedin.login(responseData.message._id);
     } catch (err) {
       alert(err.message, () => {

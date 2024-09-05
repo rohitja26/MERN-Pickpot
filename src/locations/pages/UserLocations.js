@@ -21,7 +21,7 @@ const UserLocations = () => {
       console.log(userid)
       try {
         const response = await fetch(
-          `http://localhost:5000/api/locations/users/${userid}`
+          `https://mern-pickpot-backend.onrender.com/api/locations/users/${userid}`
         );
         const responseData = await response.json();
         console.log("userlocations:", responseData.message);

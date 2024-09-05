@@ -25,7 +25,7 @@ const NewLocation = () => {
       // console.log(userID);
       formdata.append("userid", login.userID);
       formdata.append("pic", picture);
-      const response = await fetch("http://localhost:5000/api/locations", {
+      const response = await fetch("https://mern-pickpot-backend.onrender.com/api/locations", {
         method: "POST",
         body: formdata,
         // headers: {

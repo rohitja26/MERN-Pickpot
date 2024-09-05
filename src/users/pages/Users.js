@@ -7,7 +7,7 @@ const Users = () => {
   useEffect(() => {
     const sendRequest = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/users");
+        const response = await fetch("https://mern-pickpot-backend.onrender.com/api/users");
         const responseData = await response.json();
         if (!response.ok) {
           throw new Error(responseData.message);
@@ -22,10 +22,10 @@ const Users = () => {
     };
     sendRequest();
   }, []);
-  
+
   return (
     <React.Fragment>
-      {savedUsers && <UsersList items={savedUsers}/>};
+      {savedUsers && <UsersList items={savedUsers} />};
     </React.Fragment>
   );
 };

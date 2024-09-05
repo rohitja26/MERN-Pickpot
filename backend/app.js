@@ -9,7 +9,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json()); //built in middle ware
-app.use("/uploads/users",express.static(`${__dirname}\\uploads\\users`));
+app.use("/uploads/users", express.static(`${__dirname}\\uploads\\users`));
 
 app.use("/api/locations", location_route); //location route middleware custom made
 app.use("/api/users", user_route); //user route middleware custom made
@@ -31,13 +31,13 @@ app.use((error, req, res, next) => {
 });
 
 mongoose.connect('mongodb+srv://jainrohit0002:qwert12345@cluster0.mvzwisx.mongodb.net/picpot?retryWrites=true&w=majority').then(
-()=>{
-  app.listen(5000, () => {
-    console.log("server running @ 5000");
+  () => {
+    app.listen(5000, () => {
+      console.log("server running @ 5000");
+    });
+  }).catch((error) => {
+    console.log(error);
   });
-}).catch((error) =>{
-   console.log(error);
-});
 
 
 //mongodb+srv://jainrohit0002:qwert12345@cluster0.mvzwisx.mongodb.net/picpot?retryWrites=true&w=majority

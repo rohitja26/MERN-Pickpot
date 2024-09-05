@@ -1,20 +1,5 @@
 const MyError = require("../model/error");
 const User = require("../model/user");
-const ALL_USERS = [
-  {
-    id: "u1",
-    name: "Xyz",
-    email: "xyz@picpot.com",
-    password: "xyz123",
-  },
-
-  {
-    id: "u2",
-    name: "Mno",
-    email: "mno@picpot.com",
-    password: "mno123",
-  },
-];
 
 exports.getUsers = async (req, res, next) => {
   let all_users;
@@ -35,9 +20,7 @@ exports.register = async (req, res, next) => {
   } catch (err) {
     return next(new MyError("Database Error: Something bad happened", 500));
   }
-  // const findUser = ALL_USERS.find((user) => {
-  //   return user.email === email;
-  // });
+
   if (findUser) {
     return next(new MyError("Email already exists", 422));
   }
@@ -48,12 +31,6 @@ exports.register = async (req, res, next) => {
     password,
     locationsid: [],
   });
-  // const newuser = {
-  //   id: "u" + Math.trunc(Math.random() * 100),
-  //   name,
-  //   email,
-  //   password,
-  // };
 
   try {
     await newuser.save();

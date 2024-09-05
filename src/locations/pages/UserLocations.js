@@ -8,7 +8,6 @@ const UserLocations = () => {
   const logincontext = useContext(LoginContext);
 
   const userid = useParams().userid;
-  // const userid = logincontext.userID;
   const [error, setError] = useState(null);
   const [savedLocations, setSavedLocations] = useState([]);
 
@@ -18,13 +17,11 @@ const UserLocations = () => {
         setError("User ID is not defined.");
         return;
       }
-      console.log(userid)
       try {
         const response = await fetch(
           `https://mern-pickpot-backend.onrender.com/api/locations/users/${userid}`
         );
         const responseData = await response.json();
-        console.log("userlocations:", responseData.message);
 
         if (!response.ok) {
           throw new Error(responseData.message);
@@ -40,10 +37,6 @@ const UserLocations = () => {
     sendRequest();
   }, [userid]);
 
-
-  // const FILTERED_LOCATIONS = USER_LOCATIONS.filter(
-  //   (location) => location.userid === userid
-  // );
   return (
     <React.Fragment>
       {savedLocations && <LocationsList items={savedLocations} />}

@@ -28,15 +28,6 @@ const NewLocation = () => {
       const response = await fetch("https://mern-pickpot-backend.onrender.com/api/locations", {
         method: "POST",
         body: formdata,
-        // headers: {
-        //   "Content-type": "application/json",
-        // },
-        // body: JSON.stringify({
-        //   title: newlocation.title,
-        //   desc: newlocation.desc,
-        //   address: newlocation.address,
-        //   userid: login.userID,
-        // }),
       });
       const responseData = await response.json();
       console.log("new location page : ", responseData.message);

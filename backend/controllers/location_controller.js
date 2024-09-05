@@ -49,11 +49,27 @@ exports.getLocationByLocId = async (req, res, next) => {
 };
 
 exports.getLocationByUserId = async (req, res, next) => {
-  const uid = req.params.uid; //get uid from the url
+  const uid = req.params.uid; // Get uid from the URL  
+
+  // Input validation  
+  if (!uid) {
+    return next(new MyError("User ID is required", 400));
+  }
+
+
   let locations;
   try {
     locations = await Location.find({ userid: uid });
+
+    // Check if locations were found  
+    if (!locations || locations.length === 0) {
+      return res.status(404).json({ message: "No locations found for this user." });
+    }
+
+    // Send successful response  
+    return res.status(200).json({ message: locations });
   } catch (err) {
+    console.error(err); // Log the error for debugging  
     return next(new MyError("Database error: Cannot find locations", 500));
   }
 

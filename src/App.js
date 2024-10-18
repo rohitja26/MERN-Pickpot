@@ -45,6 +45,7 @@ const App = () => {
       </Switch>
     );
   } else {
+    // Here SignUp component Added for Testing purpose
     validroutes = (
       <Switch>
         <Route path="/" exact>
@@ -55,7 +56,7 @@ const App = () => {
         </Route>
         <Route path="/login" exact>
           {/* <Login /> */}
-          <SignUp /> 
+          <SignUp />
         </Route>
         <Redirect to="/login" />
       </Switch>

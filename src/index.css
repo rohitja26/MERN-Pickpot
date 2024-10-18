@@ -1,34 +1,42 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  font-family: 'Indie Flower', cursive;
+html,
+body {
+  font-family: "Indie Flower", cursive;
+  margin: 0;
 }
 
-
 body {
-    margin: 0;
-    background: #191D88;
-  }
+  margin: 0;
+  background-image: linear-gradient(
+    to right top,
+    #640d5f,
+    #b0275e,
+    #e75e51,
+    #ffa343,
+    #ffeb55
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Locks the background */
+  background-position: center;
+}
 
-  .center {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
-  .tring{
-
-    color:#AED8CC;
-    color:#CD6688;
-    color:#7A316F;
-    color:#461959 ;
-    }
-    
+.tring {
+  color: #aed8cc;
+  color: #cd6688;
+  color: #7a316f;
+  color: #461959;
+}

@@ -35,9 +35,10 @@
 .signup-container {
   background-color: var(--bg-color);
   color: var(--text-color);
+  box-shadow: 0 2px 8px black;
   padding: 20px;
   border-radius: 8px;
-  width: 90%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -100,4 +101,10 @@
 .heading-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .signup-container {
+    width: 90%;
+  }
 }

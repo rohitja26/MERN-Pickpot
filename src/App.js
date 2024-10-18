@@ -54,8 +54,8 @@ const App = () => {
           <UserLocations />
         </Route>
         <Route path="/login" exact>
-          <SignUp /> // Here only the SignUp component is added for testing
-          purposes
+          {/* <Login /> */}
+          <SignUp /> 
         </Route>
         <Redirect to="/login" />
       </Switch>

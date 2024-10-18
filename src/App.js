@@ -12,6 +12,7 @@ import MainNavigation from "./common/components/Nevigation/MainNevigation";
 import UserLocations from "./locations/pages/UserLocations";
 import Login from "./users/pages/Login";
 import { LoginContext } from "./common/components/context";
+import SignUp from "./users/pages/SignUp";
 
 const App = () => {
   const [userID, setUserID] = useState(null);
@@ -44,6 +45,7 @@ const App = () => {
       </Switch>
     );
   } else {
+    // Here SignUp component Added for Testing purpose
     validroutes = (
       <Switch>
         <Route path="/" exact>
@@ -53,7 +55,8 @@ const App = () => {
           <UserLocations />
         </Route>
         <Route path="/login" exact>
-          <Login />
+          {/* <Login /> */}
+          <SignUp />
         </Route>
         <Redirect to="/login" />
       </Switch>

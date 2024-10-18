@@ -1,0 +1,110 @@
+/* Root variables for light and dark theme colors */
+:root {
+  --bg-light-color: #7a316f;
+  --text-light-color: #fff;
+  --bg-dark-color: #1a1a1a;
+  --text-dark-color: #f0f0f0;
+  --input-text-dark-color: #000;
+  --input-text-light-color: #fff;
+  --label-text-light-color: #000;
+  --label-text-dark-color: #fff;
+  --error-text-color: #fff700;
+  --btn-bg-color: #cd6688;
+  --input-bg-light-color: #f8f8f8;
+  --input-bg-dark-color: #000;
+}
+
+/* Theme styles for light mode */
+[data-theme="light"] {
+  --bg-color: var(--bg-light-color);
+  --text-color: var(--text-light-color);
+  --input-bg-color: var(--input-bg-light-color);
+  --label-text-color: var(--label-text-light-color);
+  --input-text-color: var(--input-text-dark-color);
+}
+
+/* Theme styles for dark mode */
+[data-theme="dark"] {
+  --bg-color: var(--bg-dark-color);
+  --text-color: var(--text-dark-color);
+  --input-bg-color: var(--input-bg-dark-color);
+  --label-text-color: var(--label-text-dark-color);
+  --input-text-color: var(--input-text-light-color);
+}
+
+.signup-container {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  box-shadow: 0 2px 8px black;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.signup-container h2 {
+  color: var(--text-color);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input styles for different types */
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  font: inherit;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  background: var(--input-bg-color);
+  letter-spacing: 1px;
+  padding: 0.15rem 0.25rem;
+  resize: none;
+  color: var(--input-text-color);
+}
+
+.register-btn {
+  width: 30%;
+  margin: 0 auto;
+  background-color: var(--btn-bg-color);
+  border: 1px solid var(--text-light-color);
+  color: var(--text-light-color);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.1s ease-in;
+  font-family: "Kalam", cursive;
+}
+
+.register-btn:hover {
+  background-color: transparent;
+  color: var(--btn-bg-color);
+}
+
+.form-container span {
+  color: var(--error-text-color);
+}
+
+.input-name {
+  display: block;
+  font-family: "Kalam", cursive;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  color: var(--label-text-color);
+}
+
+.heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .signup-container {
+    width: 90%;
+  }
+}

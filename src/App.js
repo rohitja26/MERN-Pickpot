@@ -12,6 +12,7 @@ import MainNavigation from "./common/components/Nevigation/MainNevigation";
 import UserLocations from "./locations/pages/UserLocations";
 import Login from "./users/pages/Login";
 import { LoginContext } from "./common/components/context";
+import SignUp from "./users/pages/SignUp";
 
 const App = () => {
   const [userID, setUserID] = useState(null);
@@ -53,7 +54,8 @@ const App = () => {
           <UserLocations />
         </Route>
         <Route path="/login" exact>
-          <Login />
+          <SignUp /> // Here only the SignUp component is added for testing
+          purposes
         </Route>
         <Redirect to="/login" />
       </Switch>
